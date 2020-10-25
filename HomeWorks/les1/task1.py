@@ -12,7 +12,7 @@ print('I live in {}.'.format(address))
 phone = int(input('Your phone number:\n>>>'))
 print('My phone number is {}.'.format(phone))
 
-travel = input('Which country do you want to visit as soon as the lock dawn is ended?\n')
+travel = input('Which country do you want to visit as soon as the lock dawn is ended?\n>>>')
 print('For sure I am eager to visit {}!'.format(travel))
 
 print('The end:)')
