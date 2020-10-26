@@ -12,4 +12,3 @@ seconds = number - (hours_sec + minutes_sec)
 
 time = f'The result is: {hours}:{minutes}:{seconds}.'
 print(time)
-
