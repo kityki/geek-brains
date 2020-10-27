@@ -1,3 +1,10 @@
+"""
+2. Пользователь вводит время в секундах.
+Переведите время в часы, минуты и секунды и выведите в формате чч:мм:сс.
+Используйте форматирование строк.
+
+"""
+
 print('Hello, user!')
 
 number = int(input('Enter the number of seconds to convert it in HH:MM:SS format.\n>>>'))
