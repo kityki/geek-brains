@@ -4,7 +4,7 @@
 Для решения используйте цикл while и арифметические операции.
 
 """
-
+"""
 user_number = int(input('Введите целое положительное число\n'))
 result = 0
 while user_number and result != 9:
@@ -13,5 +13,6 @@ while user_number and result != 9:
         result = tmp
         user_number //= 10
         print(result)
+"""
 
 
