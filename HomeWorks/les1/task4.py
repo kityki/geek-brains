@@ -15,7 +15,7 @@
 """
 
 
-"""
+
 # Решение 1
 
 percent = int(input('Введите процент (число)\n>>> '))
@@ -24,7 +24,6 @@ a = [1]
 b = list(range(2, 5))
 c = list(range(5, 101))
 
-# number = ''.join(percent)
 
 if percent in a:
     print(f'{percent} процент')
@@ -34,8 +33,9 @@ elif percent in c:
     print(f'{percent} процентов')
 
 
+
 """
-# Решение 2.
+# Решение 2. Здесь хотела сделать по-другому, но что-то не вышло.
 
 percent = int(input('Введите процент (число)\n>>> '))
 
@@ -45,8 +45,6 @@ c = list(range(5, 101))
 
 number = list(percent)
 print(number)
-
-""""
 
 if percent[-1] == a:
     print(f'{(percent)} процент')
@@ -58,13 +56,15 @@ elif percent[-1] == b:
 elif percent[-1] == c:
 
     print(f'{str(number)} процентов')
+
 """
-
-
 
 """
 a = list(range(2, 5))
 b = list(range(5, 101))
+
+# number = ''.join(percent)
+
 
 if percent == 1:
     print(f'{percent} процент')
@@ -91,8 +91,6 @@ else:
 Найдите самую большую цифру в числе.
 Для решения используйте цикл while и арифметические операции.
 
-"""
-"""
 user_number = int(input('Введите целое положительное число\n'))
 result = 0
 while user_number and result != 9:
