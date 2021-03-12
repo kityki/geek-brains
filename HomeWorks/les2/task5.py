@@ -31,6 +31,9 @@ for i in price_list:
 
 print(id(price_list))
 
+print('_____________')
+
+
 # часть 2
 
 price_list_reversed = sorted(price_list, reverse = True)
@@ -44,6 +47,25 @@ for i in price_list_reversed:
     print(result)
 
 print(id(price_list))
+
+print('_____________')
+
+
+# часть 3
+
+for i in sorted(price_list_reversed[0:5]):
+    ruble = int(i)
+    kop = int(i * 100) % 100
+
+    result = (f'{ruble} рублей и {kop:02} копеек')
+
+    print(result)
+
+print(id(price_list))
+
+print('_____________')
+
+
 
 
 #print(id(price_list))
