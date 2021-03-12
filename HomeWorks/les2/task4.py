@@ -13,7 +13,9 @@
 first_list = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй', 'директор аэлита']
 
 for i in first_list:
-    first_list.
+    a = i.split()
+    b = a[-1].title()
+    print(f'Привет, {b}!')
 
 
 """
@@ -21,7 +23,7 @@ for i in first_list:
 Вывести каждое слово с новой строки.
 Строки необходимо пронумеровать.
 Если в слово длинное, выводить только первые 10 букв в слове.
-"""
+
 
 user_phrase = input('Введите предложение: \n>>>')
 string = user_phrase.split()
@@ -32,7 +34,7 @@ for el in range(len(string)):
         continue
     print(el + 1, string[el])
 
-"""
+
 
 user_input = input("Введите строку из нескольких слов через пробел")
 string = user_input.split()
@@ -43,4 +45,4 @@ for i in range(len(string)):
         continue
     print(i + 1, ")", string[i])
 
-"""
+"""""
