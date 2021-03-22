@@ -1,25 +1,48 @@
 """
-1. Поработайте с переменными, создайте несколько, выведите на экран,
-запросите у пользователя несколько чисел и строк
-и сохраните в переменные, выведите на экран.
+ЗАДАНИЕ 1
+
+Человеко-ориентированное представление интервала времени
+Спросить у пользователя размер интервала (в секундах). Вывести на экран строку в зависимости от размера интервала:
+
+1) до минуты: <s> сек;
+2) до часа: <m> мин <s> сек;
+3) до суток: <h> час <m> мин <s> сек;
+4) сутки или больше: <d> дн <h> час <m> мин <s> сек
+
+Например, если пользователь введет 4567 секунд, вывести:
+1 час 16 мин 7 сек
 """
 
-print('Hello there, stranger!')
+print('Hello, user!')
 
-user_login = input('Your login\n>>>')
-print('Welcome, {}!'.format(user_login))
+number = int(input('Enter the number of seconds to convert it in DD:HH:MM:SS format.\n>>> '))
 
-user_age = int(input('Your age:\n>>>'))
-print('I am {}.'.format(user_age))
+hours = int(number / 60**2)
+hours_sec = hours * 60**2
 
-address = input('Where do you live?\n>>>')
-print('I live in {}.'.format(address))
+minutes = int((number - hours_sec) / 60)
+minutes_sec = minutes * 60
 
-phone = int(input('Your phone number:\n>>>'))
-print('My phone number is {}.'.format(phone))
+day = int((number / (24*60*2)))
+day_sec = day * (24*60*2)
 
-travel = input('Which country do you want to visit as soon as the lock dawn is ended?\n>>>')
-print('For sure I am eager to visit {}!'.format(travel))
+seconds = number - (hours_sec + minutes_sec)
 
-print('The end:)')
+time = f'The result is: HH {hours}, MM {minutes}, SS {seconds}.'
+print(time)
+
+"""
+Добрый день! Код рабоатет хорошо с минутами и часами, но когда я добавляю дни почему-то выходит так:
+
+...
+day = int((number / (24*60*2)))
+day_sec = day * (24*60*2)
+seconds = number - (day_sec + hours_sec + minutes_sec)
+
+>>> 8700
+The result is: DD 8640, HH 2, MM 25, SS -8640.
+
+Почему без дней он все хорошо считает, а с ними выходит что-то непонятное?
+Ваше решение посмотрела. Но мне интересно, как можно доработать мое. Заранее спасибо! 
+"""
 

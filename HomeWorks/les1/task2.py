@@ -1,21 +1,60 @@
 """
-2. Пользователь вводит время в секундах.
-Переведите время в часы, минуты и секунды и выведите в формате чч:мм:сс.
-Используйте форматирование строк.
+2. Сумма цифр числа
+Спросить у пользователя число и вывести в ответ сумму цифр этого числа.
+Программа должна спрашивать числа у пользователя до тех пор, пока он не введет "0".
 
 """
 
 print('Hello, user!')
+number = input('Please, enter the number separated by coma\n>>> ')
 
-number = int(input('Enter the number of seconds to convert it in HH:MM:SS format.\n>>>'))
+my_list = list(map(int, number.split(' ')))
+digit_sum = 0
 
-hours = int(number / 60**2)
-hours_sec = hours * 60**2
+for i in (my_list):
+    if number == '0':
+        print('You have entered 0')
+    else:
+        digit_sum += i
+        print(digit_sum)
 
-minutes = int((number - hours_sec) / 60)
-minutes_sec = minutes * 60
 
-seconds = number - (hours_sec + minutes_sec)
 
-time = f'The result is: {hours}:{minutes}:{seconds}.'
-print(time)
+# Добрый день! Как доработать это решение так, чтобы, например, вводя цифры 6 7,
+# он не выдавал в столбик сначала 6, потом 13. Как здесь можно вывести сразу 13?
+# Или с for так не получится, а только с while?
+
+"""
+решение преподавателя:
+
+ number = input('Please, enter the number separated by coma\n>>> ')
+
+ while number != '0':
+    num = int(number)
+    digit_sum = 0
+    while num > 0:
+        digit_sum += num % 10
+        num //= 10
+
+ print(digit_sum)
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
