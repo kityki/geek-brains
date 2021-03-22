@@ -13,17 +13,40 @@
 
 user_dist = int(input('Введите ваш ежедневный результат:\n'))
 target_dist = int(input('Введите желаемый результат:\n'))
-result_dist = user_dist + user_dist * 0.1
+result_dist = int(user_dist)
 day = 0
-while result_dist <= target_dist:
+while result_dist < target_dist:
     day += 1
-    break
-print(f'На {day} день результат будет {result_dist}.')
+    result_dist += result_dist * 0.1
+    print(f'{day}-ый день: {result_dist:.2f}')
 
+
+print(f'На {day} день результат будет {target_dist}.')
 
 
 
 """
+
+run_first_day = int(input('Сколько км вы сегодня пробежали, товарищь спортсмен?\n>>> '))
+need_to_run = int(input('Какова ваша цель, сколько вы хотите пробежать в км?\n>>> '))
+days = 1
+current_result = run_first_day
+
+print('\nВаш тренер запретил увеличивать нагрузку больше чем на 10% в день!\n')
+print('Результат:')
+print(f'1-й день: {run_first_day}')
+
+while current_result < need_to_run:
+    days += 1
+    current_result += current_result * 0.1
+    print(f'{days}-й день: {current_result:.2f}')
+
+print(f'\nЛишь на {days}-й день вы пробежите {need_to_run:.2f} км.')
+"""
+
+"""
+result_dist = user_dist + user_dist * 0.1
+
 Цикл не повторяется. Выдает только: На 1 день результат будет 2.2. 
 Если break убрать, то получается беспонечноть. 
 Очевидно, что накосячила в условии, но не пойму, что именно не так. 
